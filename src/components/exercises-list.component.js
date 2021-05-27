@@ -22,7 +22,7 @@ export default class ExercisesList extends Component {
     }
 
     componentDidMount(){
-        axios.get(`${serv}/exercises`)
+        axios.get(`${serv}exercises`)
         .then(response => {
             this.setState({ exercises: response.data})
         })
@@ -54,7 +54,7 @@ export default class ExercisesList extends Component {
                         <tr>
                             <th>Username</th>
                             <th>Description</th>
-                            <th>uration</th>
+                            <th>Duration</th>
                             <th>Date</th>
                             <th>Actions</th>
                         </tr>
