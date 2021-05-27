@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
     };
 
     console.log(user);
-    Axios.post(`${serv}/users/add`, user)
+    Axios.post(`${serv}users/add`, user)
     .then(res => console.log(res.data));
 
     this.setState({
