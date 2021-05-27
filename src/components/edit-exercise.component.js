@@ -3,6 +3,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 
+const serv = "https://family-meme.herokuapp.com/";
+
 export default class EditExercise extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)//id comes directly from URL here
+    axios.get(`${serv}/exercises/${this.props.match.params.id}`)//id comes directly from URL here
     .then(response => {
       this.setState({
         username: response.data.username,
@@ -30,7 +32,7 @@ export default class EditExercise extends Component {
         date: new Date(response.data.date)
       })
     })
-    axios.get("http://localhost:5000/users").then((response) => {
+    axios.get(`${serv}/users`).then((response) => {
       if (response.data.length > 0) {
         this.setState({
           users: response.data.map((user) => user.username)
@@ -68,7 +70,7 @@ export default class EditExercise extends Component {
       date: this.state.date,
     };
     axios
-      .post('http://localhost:5000/exercises/update/' + this.props.match.params.id, exercise)
+      .post(`${serv}/exercises/update/` + this.props.match.params.id, exercise)
       .then((res) => console.log(res.data));
 
       window.alert('Exercise Updated');

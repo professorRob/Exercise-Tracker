@@ -3,6 +3,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Axios from "axios";
 
+const serv = "https://family-meme.herokuapp.com/";
+
 export default class CreateMeme extends Component {
   constructor(props) {
     super(props);
@@ -43,7 +45,7 @@ export default class CreateMeme extends Component {
     formData.append('date', this.state.date);
 
     console.log(formData);
-    Axios.post("http://localhost:5000/meme/add", formData).then((res) =>
+    Axios.post(`${serv}/meme/add`, formData).then((res) =>
       console.log(res.data)
     );
 

@@ -3,6 +3,8 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 
+const serv = "https://family-meme.herokuapp.com/";
+
 export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users')
+    axios.get(`${serv}/users`)
     .then(response => {
       if(response.data.length > 0){
         this.setState({
@@ -60,8 +62,9 @@ export default class CreateExercise extends Component {
       duration: this.state.duration,
       date: this.state.date
     }
-    axios.post('http://localhost:5000/exercises/add', exercise)
-    .then(res => console.log(res.data));
+    axios
+      .post(`${serv}/exercises/add`, exercise)
+      .then((res) => console.log(res.data));
 
     setTimeout(goNext(), 5000);
 

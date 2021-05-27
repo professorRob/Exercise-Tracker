@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Axios from 'axios'
 
+const serv = "https://family-meme.herokuapp.com/";
+
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +28,7 @@ export default class CreateUser extends Component {
     };
 
     console.log(user);
-    Axios.post("http://localhost:5000/users/add", user)
+    Axios.post(`${serv}/users/add`, user)
     .then(res => console.log(res.data));
 
     this.setState({

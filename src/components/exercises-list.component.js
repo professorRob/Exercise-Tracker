@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+const serv = "https://family-meme.herokuapp.com/";
+
 const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>
