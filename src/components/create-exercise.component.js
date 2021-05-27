@@ -23,7 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get(`${serv}/users`)
+    axios.get(`${serv}users`)
     .then(response => {
       if(response.data.length > 0){
         this.setState({
@@ -63,7 +63,7 @@ export default class CreateExercise extends Component {
       date: this.state.date
     }
     axios
-      .post(`${serv}/exercises/add`, exercise)
+      .post(`${serv}exercises/add`, exercise)
       .then((res) => console.log(res.data));
 
     setTimeout(goNext(), 5000);
