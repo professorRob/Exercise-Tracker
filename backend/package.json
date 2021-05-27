@@ -13,6 +13,8 @@
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "heroku": "^7.54.0",
+    "heroku-cli": "^7.0.9",
     "init": "^0.1.2",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.9",
