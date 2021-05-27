@@ -59,8 +59,7 @@ export default class CreateMeme extends Component {
     return (
         
       <div className="container">
-        
-        <h3>Uplaod Meme Photo</h3>
+        <h3>Upload Meme Photo</h3>
         <form onSubmit={this.onSubmit} encType="multipart/form-data">
           <div className="form-group">
             <label>Who Dis: </label>
@@ -74,7 +73,7 @@ export default class CreateMeme extends Component {
             />
           </div><br /><br />
           <div className="form-group">
-            <label>Choose eme Image</label>
+            <label>Choose Meme Image</label>
             <input
               type="file"
               filename="memeImage"
