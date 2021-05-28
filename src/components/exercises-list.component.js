@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-const serv = "https://family-meme.herokuapp.com/";
+const serv = "https://family-meme.herokuapp.com";
 
 const Exercise = props => (
   <tr>
@@ -22,7 +22,7 @@ export default class ExercisesList extends Component {
     }
 
     componentDidMount(){
-        axios.get(`${serv}exercises`)
+        axios.get(`${serv}/exercises`)
         .then(response => {
             this.setState({ exercises: response.data})
         })

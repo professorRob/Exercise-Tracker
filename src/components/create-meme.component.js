@@ -45,7 +45,7 @@ export default class CreateMeme extends Component {
     formData.append('date', this.state.date);
 
     console.log(formData);
-    Axios.post("https://family-meme.herokuapp.com/meme/add", formData).then(
+    Axios.post("https://family-meme-two.herokuapp.com/meme/add", formData).then(
       (res) => console.log(res.data)
     );
 
