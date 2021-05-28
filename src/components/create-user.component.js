@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Axios from 'axios'
 
-const serv = "https://family-meme.herokuapp.com/";
+const serv = "https://family-meme-two.herokuapp.com/";
 
 export default class CreateUser extends Component {
   constructor(props) {

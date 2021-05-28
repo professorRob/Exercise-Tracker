@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-const serv = "https://family-meme.herokuapp.com";
+const serv = "https://family-meme-two.herokuapp.com";
 
 const Exercise = props => (
   <tr>
